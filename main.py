@@ -12,3 +12,7 @@ def get_meme():
     return meme_large, subreddit
 
 
+@app.route("/")
+def index():
+    meme_pic, subreddit = get_meme()
+    return render_template("meme_index.html", meme_pic=meme_pic, subreddit=subreddit)
