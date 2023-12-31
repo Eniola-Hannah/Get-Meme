@@ -16,3 +16,10 @@ def get_meme():
 def index():
     meme_pic, subreddit = get_meme()
     return render_template("meme_index.html", meme_pic=meme_pic, subreddit=subreddit)
+
+# This enables the debugger and provides more detailed error messages. Keep in mind that debug mode should not be used in a production environment.
+if __name__ == "__main__":
+    app.run(debug=True)
+
+# set FLASK_APP = main
+# flask run
