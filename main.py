@@ -4,6 +4,9 @@ import json
 
 app = Flask(__name__)
 
+# The following function will throw an error, The error occurs because the response from the meme API does not contain valid JSON data.
+# This suggests that the response body is empty or not in the expected JSON format.
+
 def get_meme():
     url = "https://meme-api.herokuapp.com/gimme"
     response = json.loads(requests.request("GET", url).text)
